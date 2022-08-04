@@ -11,8 +11,6 @@ module load conda/2
 
 source activate /ichec/work/dcu01/cvorster/py37
 
-HOME_DIR = '/ichec/home/users/cvorster/yolov7'
-WORK_DIR = '/ichec/work/dcu01/cvorster'
-
 echo "This is the GpuQ run."
-time python '$HOME_DIR/train.py' --batch 16 --cfg '$HOME_DIR/cfg/training/yolov7.yaml' --epochs 2 --data '$WORK_DIR/data.yaml' --weights '$HOME_DIR/yolov7.pt' --device 0 --project '$WORK_DIR/test1'
+cd $HOME_DIR
+time python train.py --batch 16 --cfg "$HOME_DIR/cfg/training/yolov7.yaml" --epochs 2 --data "$WORK_DIR/data.yaml" --weights "$HOME_DIR/yolov7.pt" --device 0 --project "$WORK_DIR/test1"
