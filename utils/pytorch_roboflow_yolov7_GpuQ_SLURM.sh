@@ -1,6 +1,6 @@
 #!/bin/sh
 #SBATCH -p GpuQ
-#SBATCH -N 1
+#SBATCH -N 2
 #SBATCH -t 00:30:00
 #SBATCH -A DCU01
 
